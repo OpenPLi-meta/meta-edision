@@ -2,7 +2,7 @@ KV = "4.8.17"
 SRCDATE = "20201104"
 MODNAMES = "linuxdvb"
 
-require os-dvb-modules.inc
+require edision-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osninopro"
 

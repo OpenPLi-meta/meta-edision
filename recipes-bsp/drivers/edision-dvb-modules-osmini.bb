@@ -4,7 +4,7 @@ MODNAMES = "brcmstb-${MACHINE} ci ftm4862 fts260 sp988x"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-require os-dvb-modules.inc
+require edision-dvb-modules.inc
 
 COMPATIBLE_MACHINE = "osmini"
 

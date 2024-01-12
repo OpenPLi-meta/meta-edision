@@ -7,7 +7,7 @@ IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 IMAGEVERSION := "${DISTRO_NAME}-${DISTRO_VERSION}-${DATE}"
 IMAGEVERSION[vardepsexclude] = "DATE"
 
-IMAGE_CMD_emmcimg_append = "\
+IMAGE_CMD:emmcimg:append = "\
     mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
     cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.emmc ${IMGDEPLOYDIR}/${IMAGEDIR}/emmc.img; \
     cp -f ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGETYPE}-${MACHINE}.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
@@ -21,6 +21,6 @@ IMAGE_CMD_emmcimg_append = "\
     rm -rf ${IMAGEDIR}; \
     "
 
-IMAGE_CMD_prepend = "\
+IMAGE_CMD:prepend = "\
     rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
     "

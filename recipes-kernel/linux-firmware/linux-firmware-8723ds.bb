@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 COMPATIBLE_MACHINE = "osnino|osninoplus|osninopro"
 
-SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https"
+SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https;branch=master"
 
 SRCREV = "5ad65c3de04150106e69b5d6517c838226618798"
 
@@ -19,4 +19,4 @@ do_install() {
     install -m 0644 rtlbt/rtl8723d_fw ${D}${nonarch_base_libdir}/firmware/rtlbt/
 }
 
-FILES_${PN} += "${nonarch_base_libdir}/firmware"
+FILES:${PN} += "${nonarch_base_libdir}/firmware"

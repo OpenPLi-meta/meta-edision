@@ -8,12 +8,12 @@ IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 IMAGEVERSION := "${DISTRO_NAME}-${DISTRO_VERSION}-${DATE}"
 IMAGEVERSION[vardepsexclude] = "DATE"
 
-IMAGE_CMD_ubifs_prepend = " \
+IMAGE_CMD:ubifs:prepend = " \
 	rm -rf ${IMAGE_ROOTFS}/boot/*; \
 	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
-IMAGE_CMD_ubi_append = " \
+IMAGE_CMD:ubi:append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
 	cp -f ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGETYPE}-${MACHINE}.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \

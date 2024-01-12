@@ -5,11 +5,11 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
-RPROVIDES_${PN} = "virtual/libgles2 virtual/egl"
+RPROVIDES:${PN} = "virtual/libgles2 virtual/egl"
 
 SRC_URI = "https://github.com/edision-open/edision-gl/releases/download/v${PV}/libv3d-${PV}.tar.xz"
 
-INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP:${PN} = "ldflags"
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_SYSROOT_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT  = "1"
@@ -17,8 +17,8 @@ INHIBIT_PACKAGE_DEBUG_SPLIT  = "1"
 S = "${WORKDIR}/libv3d"
 
 LIBV3DARCH ?= ""
-LIBV3DARCH_arm = "arm-linux-gnueabihf"
-LIBV3DARCH_aarch64 = "aarch64-linux-gnu"
+LIBV3DARCH:arm = "arm-linux-gnueabihf"
+LIBV3DARCH:aarch64 = "aarch64-linux-gnu"
 
 do_configure[noexec] = "1"
 

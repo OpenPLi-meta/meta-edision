@@ -2,7 +2,7 @@ KV = "5.15.0"
 SRCDATE = "20211103"
 MODNAMES = "brcmstb-${MACHINE} ci avl6261 avl6862 si2183"
 
-RRECOMMENDS_${PN} += "linux-firmware-dvb-fe-avl62x1 linux-firmware-dvb-fe-avl68x2"
+RRECOMMENDS:${PN} += "linux-firmware-dvb-fe-avl62x1 linux-firmware-dvb-fe-avl68x2"
 
 require edision-dvb-modules.inc
 

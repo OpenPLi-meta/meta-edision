@@ -5,9 +5,9 @@ LICENSE = "GPLv2"
 INC_PR = "r0"
 
 DEPENDS += "xz-native bc-native"
-DEPENDS_append_aarch64 = " libgcc"
-KERNEL_CC_append_aarch64 = " ${TOOLCHAIN_OPTIONS}"
-KERNEL_LD_append_aarch64 = " ${TOOLCHAIN_OPTIONS}"
+DEPENDS:append:aarch64 = " libgcc"
+KERNEL_CC:append:aarch64 = " ${TOOLCHAIN_OPTIONS}"
+KERNEL_LD:append:aarch64 = " ${TOOLCHAIN_OPTIONS}"
 
 KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
@@ -21,9 +21,9 @@ B = "${WORKDIR}/build"
 
 KERNEL_IMAGEDEST = "tmp"
 
-FILES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
+FILES:${KERNEL_PACKAGE_NAME}-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
 
-pkg_postinst_kernel-image () {
+pkg_postinst:kernel-image () {
 	if [ -z "$D" ]
 	then
 		MTD_DEVICE=$(grep 'kernel' /proc/mtd | cut -f1 -d':')
@@ -33,7 +33,7 @@ pkg_postinst_kernel-image () {
 	fi
 }
 
-pkg_postrm_kernel-image () {
+pkg_postrm:kernel-image () {
 }
 
 do_rm_work() {

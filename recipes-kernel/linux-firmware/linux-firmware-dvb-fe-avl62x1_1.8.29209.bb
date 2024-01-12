@@ -2,11 +2,9 @@ SUMMARY = "Availink demodulator firmware"
 HOMEPAGE = "http://www.availink.com/"
 LICENSE = "CLOSED"
 
-COMPATIBLE_MACHINE = "osmini4k|osmio4k|osmio4kplus"
+SRC_URI = "git://github.com/availink/linux-firmware-availink.git;branch=master;protocol=https"
 
-SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https"
-
-SRCREV = "824e8de5b7a048eaf49221f7ba788dbb79123715"
+SRCREV = "f38a3a9b9906d192075984c7ac1100d51adf75a1"
 
 S = "${WORKDIR}/git"
 
@@ -18,4 +16,4 @@ do_install() {
     install -m 0644 availink/dvb-fe-avl62x1.fw ${D}${nonarch_base_libdir}/firmware/availink/
 }
 
-FILES_${PN} += "${nonarch_base_libdir}/firmware"
+FILES:${PN} += "${nonarch_base_libdir}/firmware"

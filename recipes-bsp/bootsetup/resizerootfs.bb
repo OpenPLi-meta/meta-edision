@@ -5,7 +5,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 COMPATIBLE_MACHINE = "osmini4k|osmio4k|osmio4kplus"
 
-RDEPENDS_${PN} = "e2fsprogs-resize2fs"
+RDEPENDS:${PN} = "e2fsprogs-resize2fs"
 PV = "1.0"
 PR = "r0"
 

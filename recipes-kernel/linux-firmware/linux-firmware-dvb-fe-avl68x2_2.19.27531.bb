@@ -2,9 +2,7 @@ SUMMARY = "Availink demodulator firmware"
 HOMEPAGE = "http://www.availink.com/"
 LICENSE = "CLOSED"
 
-COMPATIBLE_MACHINE = "osmini4k|osmio4k|osmio4kplus"
-
-SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https"
+SRC_URI = "git://github.com/edision-open/linux-firmware.git;protocol=https;branch=master"
 
 SRCREV = "824e8de5b7a048eaf49221f7ba788dbb79123715"
 
@@ -20,4 +18,4 @@ do_install() {
     install -m 0644 availink/dvb-fe-avl68x2-dvbtx.fw ${D}${nonarch_base_libdir}/firmware/availink/
 }
 
-FILES_${PN} += "${nonarch_base_libdir}/firmware"
+FILES:${PN} += "${nonarch_base_libdir}/firmware"

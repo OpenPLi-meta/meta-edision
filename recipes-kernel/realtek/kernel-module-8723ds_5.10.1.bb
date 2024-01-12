@@ -7,7 +7,7 @@ inherit module
 
 COMPATIBLE_MACHINE = "osnino|osninoplus|osninopro"
 
-SRC_URI = "git://github.com/edision-open/RTL8723DS_WiFi_linux.git;protocol=https"
+SRC_URI = "git://github.com/edision-open/RTL8723DS_WiFi_linux.git;protocol=https;branch=master"
 
 SRCREV = "94eef3f7cb762b7309824be6cd2b6af75ac80bbd"
 
@@ -26,4 +26,4 @@ do_install() {
     install -m 0644 ${S}/8723ds.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/
 }
 
-KERNEL_MODULE_AUTOLOAD_append = " 8723ds"
+KERNEL_MODULE_AUTOLOAD:append = " 8723ds"

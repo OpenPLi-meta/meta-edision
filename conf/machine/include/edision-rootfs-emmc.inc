@@ -9,9 +9,9 @@ IMAGEVERSION[vardepsexclude] = "DATE"
 
 IMAGE_CMD:emmcimg:append = "\
     mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
-    cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.emmc ${IMGDEPLOYDIR}/${IMAGEDIR}/emmc.img; \
+    cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.emmc ${IMGDEPLOYDIR}/${IMAGEDIR}/emmc.img; \
     cp -f ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGETYPE}-${MACHINE}.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
-    cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.tar.bz2 ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar.bz2; \
+    cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.tar.bz2 ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar.bz2; \
     cp -f ${DEPLOY_DIR_IMAGE}/splash.bin ${IMGDEPLOYDIR}/${IMAGEDIR}; \
     echo "${IMAGEVERSION}" > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
     echo "rename this file to 'force' to force an update without confirmation" > ${IMGDEPLOYDIR}/${IMAGEDIR}/noforce; \

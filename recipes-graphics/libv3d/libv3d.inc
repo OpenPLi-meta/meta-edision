@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
-RPROVIDES:${PN} = "virtual/libgles2 virtual/egl"
+RPROVIDES:${PN} = "virtual-libgles2 virtual-egl"
 
 SRC_URI = "https://github.com/edision-open/edision-gl/releases/download/v${PV}/libv3d-${PV}.tar.xz"
 

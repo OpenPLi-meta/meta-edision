@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
-RPROVIDES:${PN} = "virtual/libgles2 virtual/egl"
+RPROVIDES:${PN} = "virtual-libgles2 virtual-egl"
 
 COMPATIBLE_MACHINE = "osmega"
 PR = "r1"

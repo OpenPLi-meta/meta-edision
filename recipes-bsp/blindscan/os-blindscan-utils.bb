@@ -10,8 +10,8 @@ COMPATIBLE_MACHINE = "osmega|osmini|osminiplus"
 PACKAGES = "os-blindscan-dvbs-utils os-blindscan-dvbc-utils"
 
 PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
-RPROVIDES:os-blindscan-dvbs-utils += "virtual/blindscan-dvbs"
-RPROVIDES:os-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
+RPROVIDES:os-blindscan-dvbs-utils += "virtual-blindscan-dvbs"
+RPROVIDES:os-blindscan-dvbc-utils += "virtual-blindscan-dvbc"
 
 PV = "1.5"
 

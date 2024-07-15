@@ -8,8 +8,8 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 PACKAGES = "edision-blindscan-dvbs-utils-${MACHINE} edision-blindscan-dvbc-utils-${MACHINE}"
 
 PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
-RPROVIDES:edision-blindscan-dvbs-utils-${MACHINE} += "virtual/blindscan-dvbs"
-RPROVIDES:edision-blindscan-dvbc-utils-${MACHINE} += "virtual/blindscan-dvbc"
+RPROVIDES:edision-blindscan-dvbs-utils-${MACHINE} += "virtual-blindscan-dvbs"
+RPROVIDES:edision-blindscan-dvbc-utils-${MACHINE} += "virtual-blindscan-dvbc"
 
 SRC_URI = "https://github.com/edision-open/edision-blindscan-utils/releases/download/${PV}/edision-blindscan-utils-${PV}.zip"
 

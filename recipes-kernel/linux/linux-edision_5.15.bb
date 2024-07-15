@@ -5,6 +5,7 @@ DEPENDS += "coreutils-native"
 
 SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v5.x/linux-${PV}.tar.xz;name=kernel \
 	https://github.com/edision-open/edision-kernel/releases/download/v${PV}/edision-kernel-${PV}.patch.xz;apply=yes;name=kernelpatch \
+	file://0001-ata-ahci-fix-enum-constants-for-gcc-13.patch \
 	file://defconfig \
 	file://findkerneldevice.py \
 	"

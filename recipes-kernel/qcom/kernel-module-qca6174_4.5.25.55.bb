@@ -6,12 +6,7 @@ inherit module
 
 COMPATIBLE_MACHINE = "osmio4k|osmio4kplus"
 
-#SRC_URI = "https://git.codelinaro.org/clo/external-wlan/qcacld-2.0/-/archive/v${PV}/qcacld-2.0.tar.gz;subdir=qcacld \
-#    file://qcacld-2.0-support.patch \
-#"
-
-SRC_URI = " \
-    git://git.codelinaro.org/clo/external-wlan/qcacld-2.0.git;tag=v${PV};nobranch=1;protocol=https \
+SRC_URI = "https://downloads.openpli.org/archive/edision/qcacld-2.0-${PV}.tar.gz \
     file://qcacld-2.0-support.patch \
 "
 

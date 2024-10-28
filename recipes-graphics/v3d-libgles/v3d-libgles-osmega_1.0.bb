@@ -10,7 +10,7 @@ RPROVIDES_${PN} = "virtual/libgles2 virtual/egl"
 COMPATIBLE_MACHINE = "osmega"
 PR = "r1"
 
-SRC_URI = "https://github.com/edision-open/edision-gl/releases/download/v${PV}/${BPN}-${PV}.tar.xz"
+SRC_URI = "http://downloads.openpli.org/archive/edision/${BPN}-${PV}.tar.xz"
 
 FILES_SOLIBSDEV = ""
 FILES_${PN} += "${libdir}/lib*${SOLIBSDEV}"

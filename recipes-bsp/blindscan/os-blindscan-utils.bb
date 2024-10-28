@@ -15,7 +15,7 @@ RPROVIDES_os-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 PV = "1.5"
 
-SRC_URI = "https://github.com/edision-open/os-blindscan-utils/releases/download/v${PV}/os-blindscan-utils-${PV}.zip"
+SRC_URI = "http://downloads.openpli.org/archive/edision/os-blindscan-utils-${PV}.zip"
 
 S = "${WORKDIR}"
 

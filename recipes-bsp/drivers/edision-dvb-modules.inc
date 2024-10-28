@@ -6,7 +6,7 @@ LICENSE = "CLOSED"
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
 
-SRC_URI = "https://github.com/edision-open/edision-driver/releases/download/${SRCDATE}/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
+SRC_URI = "http://downloads.openpli.org/archive/edision/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 

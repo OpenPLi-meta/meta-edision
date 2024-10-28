@@ -6,7 +6,7 @@ inherit module
 
 COMPATIBLE_MACHINE = "osmio4k|osmio4kplus"
 
-SRC_URI = "https://source.mynonpublic.com/qcacld-2.0-${PV}.tar.gz \
+SRC_URI = "https://downloads.openpli.org/archive/edision/qcacld-2.0-${PV}.tar.gz \
     file://qcacld-2.0-support.patch \
 "
 

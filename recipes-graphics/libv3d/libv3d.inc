@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 PROVIDES = "virtual/libgles2 virtual/egl"
 RPROVIDES:${PN} = "virtual-libgles2 virtual-egl"
 
-SRC_URI = "https://github.com/edision-open/edision-gl/releases/download/v${PV}/libv3d-${PV}.tar.xz"
+SRC_URI = "http://downloads.openpli.org/archive/edision/libv3d-${PV}.tar.xz"
 
 INSANE_SKIP:${PN} = "ldflags"
 INHIBIT_PACKAGE_STRIP = "1"

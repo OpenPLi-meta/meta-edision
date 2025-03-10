@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "osmega|osmini|osminiplus"
+COMPATIBLE_MACHINE = "osmega|osmini|osminiplus|spycat|spycatmini|spycatminiplus"
 
 PACKAGES = "os-blindscan-dvbs-utils os-blindscan-dvbc-utils"
 

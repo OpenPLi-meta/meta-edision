@@ -10,10 +10,9 @@ SRC_URI = "https://downloads.openpli.org/archive/edision/qcacld-2.0-${PV}.tar.gz
     file://qcacld-2.0-support.patch \
 "
 
-SRC_URI[md5sum] = "37994d1525d20022113b5325a3aa86d5"
-SRC_URI[sha256sum] = "eecac4665d8db865bccc9ae9f90c11b686deb6a17295ee23fbc9fbc71519b50e"
-
-S = "${WORKDIR}/git"
+SRC_URI[md5sum] = "639660ec3ead1dc59e4ca20bfce7b4c9"
+SRC_URI[sha256sum] = "870b0e762e8ee885938eaf7da9dea0b6505a40a0eae7ce8c6409b53e015faa7a"
+S = "${WORKDIR}/qcacld-2.0-${PV}"
 
 do_install() {
     install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra

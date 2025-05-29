@@ -5,10 +5,17 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v4.x/linux-${PV}.tar.xz;name=kernel 
 	http://downloads.openpli.org/archive/edision/edision-kernel-${PV}.patch.xz;apply=yes;name=kernelpatch \
 	file://make-yyloc-declaration-extern.patch \
 	file://use-address-of-operator-on-section-symbols-gcc-12.patch \
+	file://fix-never-be-null_outside-array-bounds-gcc-12.patch \
 	file://defconfig \
 	"
 
 COMPATIBLE_MACHINE = "osmega|osmini|osminiplus"
+
+# By default, kernel.bbclass modifies package names to allow multiple kernels
+# to be installed in parallel. We revert this change and rprovide the versioned
+# package names instead, to allow only one kernel to be installed.
+RPROVIDES:${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES:${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI[kernel.md5sum] = "251a5deee0fa6daf3f356b1bbda9eab8"
 SRC_URI[kernel.sha256sum] = "b67ecafd0a42b3383bf4d82f0850cbff92a7e72a215a6d02f42ddbafcf42a7d6"

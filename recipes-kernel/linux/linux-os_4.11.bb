@@ -7,6 +7,7 @@ SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v4.x/linux-${PV}.tar.xz;name=kernel 
 	file://use-address-of-operator-on-section-symbols-gcc-12.patch \
 	file://fix-never-be-null_outside-array-bounds-gcc-12.patch \
 	file://defconfig \
+	file://fix-build-with-binutils-2.41.patch \
 	"
 
 COMPATIBLE_MACHINE = "osmega|osmini|osminiplus"
